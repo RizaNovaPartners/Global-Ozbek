@@ -31,7 +31,8 @@
         }
 
         .container {
-            max-width: 850px;
+            /* O'ZGARTIRISH: Konteyner endi kattaroq bo'lishi uchun o'zgartirildi */
+            max-width: 1600px;
             width: 100%;
             text-align: center;
         }
@@ -42,10 +43,17 @@
             margin-bottom: 40px; 
             box-shadow: none; 
             line-height: 0;
+            /* Rasm markazda turishi uchun */
+            display: flex;
+            justify-content: center;
         }
 
+        /* BANNER O'LCHAMI QAT'IY O'RNATILDI */
         .hero-banner {
-            width: 100%;
+            width: 1546px;
+            height: 423px;
+            object-fit: cover; /* Rasm o'lchamga moslashayotganda sifatini saqlaydi */
+            flex-shrink: 0; /* Qisilib qolmasligi uchun */
             display: block;
             border-radius: 20px;
             box-shadow: var(--shadow);
@@ -58,6 +66,10 @@
             box-shadow: var(--shadow);
             margin-bottom: 50px;
             text-align: center;
+             /* Qat'iy o'lchamli banner ostida yaxshi ko'rinishi uchun */
+            max-width: 850px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .description-card .welcome-text {
@@ -78,6 +90,13 @@
             font-size: 1rem;
             color: #444;
             line-height: 1.8;
+        }
+        
+        .platforms {
+             /* Qat'iy o'lchamli banner ostida yaxshi ko'rinishi uchun */
+            max-width: 850px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .platforms h2 {
@@ -149,7 +168,7 @@
 
     <div class="container">
         <header class="hero">
-            <img src="logos/youtube_banner.jpg" alt="Global Ozbek Banner" class="hero-banner">
+            <img src="logos/youtube_banner.png" alt="Global Ozbek Banner" class="hero-banner">
         </header>
 
         <section class="description-card">
@@ -170,7 +189,7 @@
                     <a href="https://allplay.uz/uz/movie/69067/global-ozbek" target="_blank" class="platform-card">
                         <img src="logos/allplay.png" alt="AllPlay Logo">
                     </a>
-                    <a href="https://cinerama.uz/watch/30/48380" target="_blank" class="platform-card">
+                    <a href="https://cinerama.uz/watch/30/4830" target="_blank" class="platform-card">
                         <img src="logos/cinerama.png" alt="Cinerama Logo">
                     </a>
                     <a href="https://itv.uz/detail/94929/global-ozbek" target="_blank" class="platform-card">
