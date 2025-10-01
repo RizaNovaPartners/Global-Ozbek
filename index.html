@@ -9,13 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
     
     <style>
-        /* CSS KODLARI (YANGI DIZAYN) */
         :root {
-            --bg-color: #eef1f5; /* Fon rangi o'zgartirildi */
-            --text-color: #2c3e50; /* Matn rangi to'qroq qilindi */
+            --bg-color: #eef1f5;
+            --text-color: #2c3e50;
             --primary-color: #c00; 
             --card-bg: #ffffff;
-            /* Soya effekti yangilandi */
+            /* Platforma kartochkalari uchun yangi qora fon */
+            --dark-card-bg: #222; 
             --shadow: 0 5px 15px rgba(0, 0, 0, 0.07), 0 15px 35px rgba(0, 0, 0, 0.05);
         }
 
@@ -24,7 +24,7 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             margin: 0;
-            padding: 40px 20px; /* Atrofdagi bo'sh joy ko'paytirildi */
+            padding: 40px 20px;
             line-height: 1.7;
             display: flex;
             justify-content: center;
@@ -42,19 +42,17 @@
         .hero {
             background: var(--card-bg);
             padding: 50px 40px;
-            border-radius: 20px; /* Radius yumshoqroq qilindi */
+            border-radius: 20px;
             box-shadow: var(--shadow);
             margin-bottom: 50px;
         }
 
         .main-logo {
-            /* Asosiy logo kattalashtirildi */
             max-width: 280px; 
             margin-bottom: 25px;
         }
 
         .slogan {
-            /* Shior kattaroq va qalinroq qilindi */
             font-size: 2.2rem; 
             font-weight: 800;
             margin-bottom: 20px;
@@ -77,13 +75,13 @@
             text-decoration: none;
             font-weight: 700;
             font-size: 1rem;
-            box-shadow: 0 4px 15px rgba(192, 0, 0, 0.3); /* Tugmaga soya qo'shildi */
+            box-shadow: 0 4px 15px rgba(192, 0, 0, 0.3);
             transition: all 0.3s ease;
         }
 
         .cta-button:hover {
             background-color: #a00;
-            transform: translateY(-4px); /* Bosish effekti kuchaytirildi */
+            transform: translateY(-4px);
             box-shadow: 0 6px 20px rgba(192, 0, 0, 0.4);
         }
 
@@ -101,11 +99,12 @@
             gap: 25px;
         }
 
+        /* O'ZGARTIRISH KIRITILGAN ASOSIY JOY */
         .platform-card {
-            background: var(--card-bg);
+            background: var(--dark-card-bg); /* Orqa fon qoraga o'zgartirildi */
+            border: 1px solid #444; /* Soya o'rniga nozik chegara qo'shildi */
             padding: 25px;
             border-radius: 16px;
-            box-shadow: var(--shadow);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -114,13 +113,12 @@
         }
 
         .platform-card:hover {
-            transform: translateY(-5px) scale(1.03);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1), 0 20px 45px rgba(0, 0, 0, 0.08);
+            transform: translateY(-5px);
+            border-color: #777; /* Sichqoncha borganda chegara yorqinlashadi */
         }
 
         .platform-card img {
             max-width: 100%;
-            /* Platforma logolari kattalashtirildi va aniqroq bo'ldi */
             max-height: 50px;
             object-fit: contain;
         }
