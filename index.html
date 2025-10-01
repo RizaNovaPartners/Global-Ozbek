@@ -12,8 +12,6 @@
         :root {
             --bg-color: #eef1f5;
             --text-color: #2c3e50;
-            --hero-dark-bg: #1c1c1c; /* Bio uchun yangi to'q fon */
-            --hero-light-text: #f0f0f0; /* Bio uchun yangi oq yozuv */
             --dark-card-bg: #222; 
             --shadow: 0 5px 15px rgba(0, 0, 0, 0.07), 0 15px 35px rgba(0, 0, 0, 0.05);
         }
@@ -37,70 +35,43 @@
             text-align: center;
         }
 
-        /* Bosh qism (Hero) - Qora fonga o'zgartirildi */
         .hero {
-            background: var(--hero-dark-bg);
-            padding: 40px;
+            padding: 0; 
+            border-radius: 20px;
+            margin-bottom: 50px;
+            box-shadow: none; 
+            line-height: 0;
+        }
+
+        .hero-banner {
+            width: 100%;
+            display: block;
             border-radius: 20px;
             box-shadow: var(--shadow);
-            margin-bottom: 50px;
         }
 
-        /* Logotip ko'rinishi uchun maxsus oq maydoncha */
-        .logo-container {
-            background: #fff;
-            border-radius: 25px;
-            padding: 20px;
-            display: inline-block;
-            margin-bottom: 30px;
-            box-shadow: 0 0 30px rgba(0,0,0,0.5);
-        }
-
-        .main-logo {
-            /* Asosiy logo o'lchami kattalashtirildi */
-            max-width: 250px; 
-            display: block; /* Konteyner ichida to'g'ri turishi uchun */
-        }
-
-        .slogan {
-            font-size: 2.2rem; 
-            font-weight: 800;
-            margin-bottom: 20px;
-            color: var(--hero-light-text); /* Yozuv oq rangda */
-        }
-
-        .description {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-            color: #ccc; /* Yozuv oqishroq rangda */
-        }
-
-        /* Platformalar */
         .platforms h2 {
             font-size: 2rem;
             margin-bottom: 35px;
             font-weight: 700;
             color: #1d2d3d;
         }
-
-        /* Logolar bir qator qilinishi uchun o'zgartirish */
+        
         .platforms-grid {
-            display: flex; /* Grid -> Flex ga o'zgartirildi */
-            justify-content: center; /* Markazga to'g'rilandi */
-            gap: 15px; /* Orasidagi masofa */
-            flex-wrap: nowrap; /* Hech qachon pastga tushmaydi */
-            overflow-x: auto; /* Telefonda sig'masa, yon tomonga suriladi */
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
             padding-bottom: 10px;
         }
 
         .platform-card {
             background: var(--dark-card-bg);
             border: 1px solid #444;
-            /* Kartochka o'lchami ixchamlashtirildi */
             width: 105px;
             height: 80px;
-            flex-shrink: 0; /* Qisilib qolmasligi uchun */
+            flex-shrink: 0;
             border-radius: 16px;
             display: flex;
             justify-content: center;
@@ -115,12 +86,10 @@
 
         .platform-card img {
             max-width: 100%;
-            /* Logo o'lchami moslashtirildi */
             max-height: 40px;
             object-fit: contain;
         }
 
-        /* Footer */
         .footer {
             padding: 30px 20px 0;
             font-size: 1rem;
@@ -137,14 +106,10 @@
             text-decoration: underline;
         }
 
-        /* Mobil qurilmalar uchun moslashuv */
         @media (max-width: 768px) {
             body { padding: 20px 10px; }
-            .hero { padding: 30px 20px; }
-            .slogan { font-size: 1.8rem; }
-            .description { font-size: 1rem; }
             .platforms h2 { font-size: 1.6rem; }
-            .platforms-grid { justify-content: flex-start; } /* Mobil qurilmada boshidan boshlanadi */
+            .platforms-grid { justify-content: flex-start; }
         }
     </style>
 </head>
@@ -152,13 +117,7 @@
 
     <div class="container">
         <header class="hero">
-            <div class="logo-container">
-                <img src="logos/global-ozbek.png" alt="Global O'zbek Logo" class="main-logo">
-            </div>
-            <h1 class="slogan">Ildizi vatanda, dovrug'i jahonda! 🌐</h1>
-            <p class="description">
-                “Global O’zbek” kanaliga xush kelibsiz! Milliy qadriyatlarini unutmagan, o’zbek xalqining keng qamrovli imkoniyatlarini targ’ib qiluvchi, nafaqat O’zbekistonda, balki, xorijda ham e’tirof etilgan, dovrug’ tarqatayotgan zamondoshlarimiz loyihasi!
-            </p>
+            <img src="logos/youtube_banner.jpg" alt="Global Ozbek Banner" class="hero-banner">
         </header>
 
         <main>
