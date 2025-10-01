@@ -12,8 +12,8 @@
         :root {
             --bg-color: #eef1f5;
             --text-color: #2c3e50;
-            --primary-color: #c00; 
-            --card-bg: #ffffff;
+            --hero-dark-bg: #1c1c1c; /* Bio uchun yangi to'q fon */
+            --hero-light-text: #f0f0f0; /* Bio uchun yangi oq yozuv */
             --dark-card-bg: #222; 
             --shadow: 0 5px 15px rgba(0, 0, 0, 0.07), 0 15px 35px rgba(0, 0, 0, 0.05);
         }
@@ -37,33 +37,43 @@
             text-align: center;
         }
 
-        /* Bosh qism (Hero) */
+        /* Bosh qism (Hero) - Qora fonga o'zgartirildi */
         .hero {
-            background: var(--card-bg);
-            padding: 50px 40px;
+            background: var(--hero-dark-bg);
+            padding: 40px;
             border-radius: 20px;
             box-shadow: var(--shadow);
             margin-bottom: 50px;
         }
 
+        /* Logotip ko'rinishi uchun maxsus oq maydoncha */
+        .logo-container {
+            background: #fff;
+            border-radius: 25px;
+            padding: 20px;
+            display: inline-block;
+            margin-bottom: 30px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        }
+
         .main-logo {
-            /* Asosiy logo o'lchami kichraytirildi */
-            max-width: 160px; 
-            margin-bottom: 25px;
+            /* Asosiy logo o'lchami kattalashtirildi */
+            max-width: 250px; 
+            display: block; /* Konteyner ichida to'g'ri turishi uchun */
         }
 
         .slogan {
             font-size: 2.2rem; 
             font-weight: 800;
             margin-bottom: 20px;
-            color: #1d2d3d;
+            color: var(--hero-light-text); /* Yozuv oq rangda */
         }
 
         .description {
             font-size: 1.1rem;
             max-width: 600px;
-            margin: 0 auto 35px;
-            color: #555e68;
+            margin: 0 auto;
+            color: #ccc; /* Yozuv oqishroq rangda */
         }
 
         /* Platformalar */
@@ -74,23 +84,28 @@
             color: #1d2d3d;
         }
 
+        /* Logolar bir qator qilinishi uchun o'zgartirish */
         .platforms-grid {
-            display: grid;
-            /* Grid ustunlari soni 6 taga moslandi */
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); 
-            gap: 20px;
+            display: flex; /* Grid -> Flex ga o'zgartirildi */
+            justify-content: center; /* Markazga to'g'rilandi */
+            gap: 15px; /* Orasidagi masofa */
+            flex-wrap: nowrap; /* Hech qachon pastga tushmaydi */
+            overflow-x: auto; /* Telefonda sig'masa, yon tomonga suriladi */
+            padding-bottom: 10px;
         }
 
         .platform-card {
             background: var(--dark-card-bg);
             border: 1px solid #444;
-            padding: 25px;
+            /* Kartochka o'lchami ixchamlashtirildi */
+            width: 105px;
+            height: 80px;
+            flex-shrink: 0; /* Qisilib qolmasligi uchun */
             border-radius: 16px;
             display: flex;
             justify-content: center;
             align-items: center;
             transition: all 0.3s ease;
-            min-height: 80px; /* Balandlik biroz kichraytirildi */
         }
 
         .platform-card:hover {
@@ -100,7 +115,8 @@
 
         .platform-card img {
             max-width: 100%;
-            max-height: 45px; /* Logotip o'lchami moslashtirildi */
+            /* Logo o'lchami moslashtirildi */
+            max-height: 40px;
             object-fit: contain;
         }
 
@@ -112,7 +128,7 @@
         }
 
         .footer a {
-            color: var(--primary-color);
+            color: #c00;
             text-decoration: none;
             font-weight: 500;
         }
@@ -123,11 +139,12 @@
 
         /* Mobil qurilmalar uchun moslashuv */
         @media (max-width: 768px) {
-            body { padding: 20px 15px; }
-            .hero { padding: 40px 25px; }
+            body { padding: 20px 10px; }
+            .hero { padding: 30px 20px; }
             .slogan { font-size: 1.8rem; }
             .description { font-size: 1rem; }
             .platforms h2 { font-size: 1.6rem; }
+            .platforms-grid { justify-content: flex-start; } /* Mobil qurilmada boshidan boshlanadi */
         }
     </style>
 </head>
@@ -135,12 +152,14 @@
 
     <div class="container">
         <header class="hero">
-            <img src="logos/global-ozbek.png" alt="Global O'zbek Logo" class="main-logo">
+            <div class="logo-container">
+                <img src="logos/global-ozbek.png" alt="Global O'zbek Logo" class="main-logo">
+            </div>
             <h1 class="slogan">Ildizi vatanda, dovrug'i jahonda! 🌐</h1>
             <p class="description">
                 “Global O’zbek” kanaliga xush kelibsiz! Milliy qadriyatlarini unutmagan, o’zbek xalqining keng qamrovli imkoniyatlarini targ’ib qiluvchi, nafaqat O’zbekistonda, balki, xorijda ham e’tirof etilgan, dovrug’ tarqatayotgan zamondoshlarimiz loyihasi!
             </p>
-            </header>
+        </header>
 
         <main>
             <section class="platforms">
@@ -155,7 +174,7 @@
                     <a href="https://cinerama.uz/watch/30/48380" target="_blank" class="platform-card">
                         <img src="logos/cinerama.png" alt="Cinerama Logo">
                     </a>
-                    <a href="https://itv.uz/detail/994929/global-ozbek" target="_blank" class="platform-card">
+                    <a href="https://itv.uz/detail/94929/global-ozbek" target="_blank" class="platform-card">
                         <img src="logos/itv.png" alt="iTV Logo">
                     </a>
                     <a href="https://kinom.uz/contents/2025-global-ozbek-1169053723290373686" target="_blank" class="platform-card">
