@@ -6,16 +6,17 @@
     <title>Global O'zbek Loyihasi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
     
     <style>
-        /* Umumiy ranglar va o'zgaruvchilar */
+        /* CSS KODLARI (YANGI DIZAYN) */
         :root {
-            --bg-color: #f8f9fa;
-            --text-color: #222;
-            --primary-color: #d62828; /* Zamonaviy chuqur qizil */
+            --bg-color: #eef1f5; /* Fon rangi o'zgartirildi */
+            --text-color: #2c3e50; /* Matn rangi to'qroq qilindi */
+            --primary-color: #c00; 
             --card-bg: #ffffff;
-            --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            /* Soya effekti yangilandi */
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.07), 0 15px 35px rgba(0, 0, 0, 0.05);
         }
 
         body {
@@ -23,8 +24,8 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             margin: 0;
-            padding: 20px;
-            line-height: 1.6;
+            padding: 40px 20px; /* Atrofdagi bo'sh joy ko'paytirildi */
+            line-height: 1.7;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -32,102 +33,103 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 850px;
             width: 100%;
             text-align: center;
         }
 
-        /* Hero qismi */
+        /* Bosh qism (Hero) */
         .hero {
             background: var(--card-bg);
-            padding: 40px 30px;
-            border-radius: 15px;
+            padding: 50px 40px;
+            border-radius: 20px; /* Radius yumshoqroq qilindi */
             box-shadow: var(--shadow);
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
         .main-logo {
-            max-width: 220px;
-            margin-bottom: 20px;
+            /* Asosiy logo kattalashtirildi */
+            max-width: 280px; 
+            margin-bottom: 25px;
         }
 
         .slogan {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: var(--text-color);
+            /* Shior kattaroq va qalinroq qilindi */
+            font-size: 2.2rem; 
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #1d2d3d;
         }
 
         .description {
             font-size: 1.1rem;
-            max-width: 650px;
-            margin: 0 auto 30px;
-            color: #555;
+            max-width: 600px;
+            margin: 0 auto 35px;
+            color: #555e68;
         }
 
         .cta-button {
             display: inline-block;
             background-color: var(--primary-color);
             color: #fff;
-            padding: 14px 32px;
+            padding: 16px 35px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             font-size: 1rem;
-            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(192, 0, 0, 0.3); /* Tugmaga soya qo'shildi */
+            transition: all 0.3s ease;
         }
 
         .cta-button:hover {
-            background-color: #b71c1c;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(214, 40, 40, 0.3);
+            background-color: #a00;
+            transform: translateY(-4px); /* Bosish effekti kuchaytirildi */
+            box-shadow: 0 6px 20px rgba(192, 0, 0, 0.4);
         }
 
-        /* Platformalar bo‘limi */
-        .platforms {
-            margin-bottom: 40px;
-        }
-
+        /* Platformalar */
         .platforms h2 {
-            font-size: 1.8rem;
-            margin-bottom: 30px;
+            font-size: 2rem;
+            margin-bottom: 35px;
             font-weight: 700;
+            color: #1d2d3d;
         }
 
         .platforms-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 25px;
         }
 
         .platform-card {
             background: var(--card-bg);
-            padding: 20px;
-            border-radius: 15px;
+            padding: 25px;
+            border-radius: 16px;
             box-shadow: var(--shadow);
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            min-height: 100px;
+            transition: all 0.3s ease;
+            min-height: 90px;
         }
 
         .platform-card:hover {
-            transform: scale(1.07);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1), 0 20px 45px rgba(0, 0, 0, 0.08);
         }
 
         .platform-card img {
-            max-height: 55px; /* Hamma logolar bir xil bo‘ladi */
-            width: auto;
+            max-width: 100%;
+            /* Platforma logolari kattalashtirildi va aniqroq bo'ldi */
+            max-height: 50px;
             object-fit: contain;
         }
 
         /* Footer */
         .footer {
-            padding: 20px;
-            font-size: 0.9rem;
-            color: #777;
+            padding: 30px 20px 0;
+            font-size: 1rem;
+            color: #6c7a89;
         }
 
         .footer a {
@@ -140,21 +142,13 @@
             text-decoration: underline;
         }
 
-        /* Mobil uchun */
+        /* Mobil qurilmalar uchun moslashuv */
         @media (max-width: 768px) {
-            .slogan {
-                font-size: 1.5rem;
-            }
-            .description {
-                font-size: 1rem;
-            }
-            .platforms-grid {
-                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-                gap: 15px;
-            }
-            .hero {
-                padding: 30px 20px;
-            }
+            body { padding: 20px 15px; }
+            .hero { padding: 40px 25px; }
+            .slogan { font-size: 1.8rem; }
+            .description { font-size: 1rem; }
+            .platforms h2 { font-size: 1.6rem; }
         }
     </style>
 </head>
