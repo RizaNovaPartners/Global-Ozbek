@@ -4,10 +4,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global O'zbek Loyihasi</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Umumiy ranglar va o'zgaruvchilar */
+        :root {
+            --bg-color: #f8f9fa;
+            --text-color: #222;
+            --primary-color: #d62828; /* Zamonaviy chuqur qizil */
+            --card-bg: #ffffff;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Hero qismi */
+        .hero {
+            background: var(--card-bg);
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+
+        .main-logo {
+            max-width: 220px;
+            margin-bottom: 20px;
+        }
+
+        .slogan {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .description {
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin: 0 auto 30px;
+            color: #555;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #b71c1c;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(214, 40, 40, 0.3);
+        }
+
+        /* Platformalar bo‘limi */
+        .platforms {
+            margin-bottom: 40px;
+        }
+
+        .platforms h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .platforms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 25px;
+        }
+
+        .platform-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            min-height: 100px;
+        }
+
+        .platform-card:hover {
+            transform: scale(1.07);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .platform-card img {
+            max-height: 55px; /* Hamma logolar bir xil bo‘ladi */
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobil uchun */
+        @media (max-width: 768px) {
+            .slogan {
+                font-size: 1.5rem;
+            }
+            .description {
+                font-size: 1rem;
+            }
+            .platforms-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 15px;
+            }
+            .hero {
+                padding: 30px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
 
