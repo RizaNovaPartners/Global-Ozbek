@@ -73,7 +73,7 @@
             line-height: 1.8;
         }
         
-        .platforms h2, .partners h2 {
+        .platforms h2, .partners h2 { /* Partners sarlavhasi uchun ham bir xil stil */
             font-size: 2rem;
             margin-bottom: 35px;
             font-weight: 700;
@@ -117,25 +117,16 @@
         .partners {
             margin-bottom: 50px;
         }
-        
-        .partner-card {
+        .partner-logo a {
             display: inline-block;
-            background: var(--dark-card-bg);
-            border-radius: 16px;
-            padding: 25px 40px;
-            border: 1px solid #444;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease;
         }
-
-        .partner-card:hover {
-            transform: translateY(-5px);
-            border-color: #777;
+        .partner-logo a:hover {
+            transform: scale(1.05);
         }
-
-        .partner-card img {
-            max-width: 250px;
+        .partner-logo img {
+            max-width: 250px; /* Hamkor logosining maksimal eni */
             height: auto;
-            display: block;
         }
 
         .footer {
@@ -184,6 +175,7 @@
             height: 28px;
             fill: #555;
         }
+
 
         @media (max-width: 768px) {
             body { padding: 20px 10px; }
@@ -235,9 +227,11 @@
 
             <section class="partners">
                 <h2>Bizning Hamkorimiz</h2>
-                <a href="https://rizanova.uz/" target="_blank" class="partner-card">
-                    <img src="logos/rizanova.png" alt="RizaNova Logo">
-                </a>
+                <div class="partner-logo">
+                    <a href="RIZANOVA_LINKI" target="_blank">
+                        <img src="logos/rizanova.png" alt="RizaNova Logo">
+                    </a>
+                </div>
             </section>
         </main>
 
