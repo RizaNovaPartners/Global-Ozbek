@@ -10,15 +10,15 @@
     
     <style>
         :root {
-            --bg-color: #eef1f5;
             --text-color: #2c3e50;
             --card-bg: #ffffff;
             --dark-card-bg: #222; 
-            --shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            --shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Soya kuchaytirildi */
         }
 
         body {
             font-family: 'Montserrat', sans-serif;
+            /* O'ZGARTIRISH: Orqa fonga chiroyli gradient qo'shildi */
             background: linear-gradient(to top right, #eef1f5 0%, #ffffff 100%);
             color: var(--text-color);
             margin: 0;
@@ -73,7 +73,7 @@
             line-height: 1.8;
         }
         
-        .platforms h2, .partners h2 { /* Partners sarlavhasi uchun ham bir xil stil */
+        .platforms h2 {
             font-size: 2rem;
             margin-bottom: 35px;
             font-weight: 700;
@@ -111,22 +111,6 @@
             max-width: 100%;
             max-height: 40px;
             object-fit: contain;
-        }
-
-        /* HAMKORLAR BO'LIMI UCHUN YANGI STILLAR */
-        .partners {
-            margin-bottom: 50px;
-        }
-        .partner-logo a {
-            display: inline-block;
-            transition: transform 0.3s ease;
-        }
-        .partner-logo a:hover {
-            transform: scale(1.05);
-        }
-        .partner-logo img {
-            max-width: 250px; /* Hamkor logosining maksimal eni */
-            height: auto;
         }
 
         .footer {
@@ -179,7 +163,7 @@
 
         @media (max-width: 768px) {
             body { padding: 20px 10px; }
-            .platforms h2, .partners h2 { font-size: 1.6rem; }
+            .platforms h2 { font-size: 1.6rem; }
             .platforms-grid { justify-content: flex-start; }
             .description-card { padding: 25px 20px; }
             .description-card .slogan { font-size: 1.5rem; }
@@ -224,15 +208,6 @@
                     </a>
                 </div>
             </section>
-
-            <section class="partners">
-                <h2>Bizning Hamkorimiz</h2>
-                <div class="partner-logo">
-                    <a href="RIZANOVA_LINKI" target="_blank">
-                        <img src="logos/rizanova.png" alt="RizaNova Logo">
-                    </a>
-                </div>
-            </section>
         </main>
 
         <footer class="footer">
@@ -242,7 +217,7 @@
                     <svg viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
                 </a>
                 <a href="https://t.me/globalozbek" target="_blank" title="Telegram">
-                    <svg viewBox="0 0 496 512"><path d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8ZM362.952,176.66c-3.732,39.215-19.881,134.378-28.1,178.3-3.476,18.584-10.322,24.816-16.948,25.425-14.4,1.326-25.338-9.517-39.287-18.661-21.224-14.074-31.234-22.6-51.082-35.179-24.605-15.585-8.835-23.268,2.78-37.952,3.431-4.112,25.653-24.1,25.653-24.1s4.4-3.513-1.412-8.318c-5.813-4.805-31.547-22.402-44.132-31.55-12.585-9.147-18.91-11.789-16.57-19.333,2.34-7.544,15.155-21.43,22.109-26.637,6.954-5.206,13.86-8.243,18.571-8.358,4.71-.114,9.663,1.932,11.242,3.153Z"/></svg>
+                    <svg viewBox="0 0 496 512"><path d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8ZM362.952,176.66c-3.732,39.215-19.881,134.378-28.1,178.3-3.476,18.584-10.322,24.816-16.948,25.425-14.4,1.326-25.338-9.517-39.287-18.661-21.224-14.074-31.234-22.611-51.082-35.179-24.605-15.585-8.835-23.268,2.78-37.952,3.431-4.112,25.653-24.1,25.653-24.1s4.4-3.513-1.412-8.318c-5.813-4.805-31.547-22.402-44.132-31.55-12.585-9.147-18.91-11.789-16.57-19.333,2.34-7.544,15.155-21.43,22.109-26.637,6.954-5.206,13.86-8.243,18.571-8.358,4.71-.114,9.663,1.932,11.242,3.153Z"/></svg>
                 </a>
             </div>
             <p>Bog'lanish uchun: <a href="tel:+998903502025">+998 90 350 20 25</a></p>
